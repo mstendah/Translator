@@ -5,39 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translation Editor</title>
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            padding: 24px;
+        }
+        h1 {
+            margin-bottom: 16px;
+            font-size: 1.6rem;
+        }
+        #status {
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .toolbar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .toolbar button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .btn-save-en { background: #2196F3; color: #fff; }
+        .btn-save-fi { background: #4CAF50; color: #fff; }
+        .btn-save-se { background: #FF9800; color: #fff; }
+        .btn-save-all { background: #9C27B0; color: #fff; }
+        .toolbar button:hover { opacity: 0.85; }
+        .table-wrapper { overflow-x: auto; }
         table {
             width: 100%;
             border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
         }
         th, td {
-            border: 1px solid #000;
-            padding: 8px;
+            border: 1px solid #ddd;
+            padding: 8px 10px;
             text-align: left;
+            vertical-align: top;
         }
         th {
-            background-color: #f2f2f2;
+            background: #f0f0f0;
+            font-weight: bold;
+            white-space: nowrap;
         }
+        td.key-col {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #555;
+            white-space: nowrap;
+            width: 200px;
+        }
+        td[contenteditable="true"] {
+            outline: none;
+            min-width: 180px;
+        }
+        td[contenteditable="true"]:focus {
+            background: #fffde7;
+            box-shadow: inset 0 0 0 2px #FFC107;
+        }
+        tr:nth-child(even) { background: #fafafa; }
+        tr:hover td { background: #f0f8ff; }
+        tr:hover td.key-col { background: #e8f0fe; }
+        #loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.1rem;
+            color: #888;
+        }
+        .save-notice {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #323232;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        .save-notice.show { opacity: 1; }
     </style>
 </head>
 <body>
     <h1>Translation Editor</h1>
-    <table>
-        <tr>
-            <th>Language</th>
-            <th>Translation</th>
-        </tr>
-        <tr>
-            <td>English (EN)</td>
-            <td contenteditable="true">Enter English translation...</td>
-        </tr>
-        <tr>
-            <td>Finnish (FI)</td>
-            <td contenteditable="true">Enter Finnish translation...</td>
-        </tr>
-        <tr>
-            <td>Swedish (SV)</td>
-            <td contenteditable="true">Pre-translated from English</td>
-        </tr>
-    </table>
+    <p id="status">Loading translations…</p>
+    <div class="toolbar" style="display:none" id="toolbar">
+        <button class="btn-save-en" onclick="downloadArb('en')">⬇ Download EN</button>
+        <button class="btn-save-fi" onclick="downloadArb('fi')">⬇ Download FI</button>
+        <button class="btn-save-se" onclick="downloadArb('se')">⬇ Download SE</button>
+        <button class="btn-save-all" onclick="downloadAll()">⬇ Download All</button>
+    </div>
+    <div id="loading">Loading…</div>
+    <div class="table-wrapper" style="display:none" id="tableWrapper">
+        <table id="translationTable">
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>English (EN)</th>
+                    <th>Finnish (FI)</th>
+                    <th>Swedish (SE)</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <div class="save-notice" id="saveNotice">File downloaded!</div>
+
+    <script>
+        const ARB_FILES = {
+            en: 'lib/l10n/app_en.arb',
+            fi: 'lib/l10n/app_fi.arb',
+            se: 'lib/l10n/app_se.arb'
+        };
+
+        // In-memory stores for each language's data
+        const data = { en: {}, fi: {}, se: {} };
+
+        // Collect all translation keys (non-metadata keys)
+        let allKeys = [];
+
+        async function loadArb(lang) {
+            const response = await fetch(ARB_FILES[lang]);
+            if (!response.ok) throw new Error(`Failed to load ${ARB_FILES[lang]}: ${response.status} ${response.statusText}`);
+            return response.json();
+        }
+
+        function isTranslationKey(key) {
+            return !key.startsWith('@');
+        }
+
+        async function init() {
+            try {
+                const [en, fi, se] = await Promise.all([
+                    loadArb('en'),
+                    loadArb('fi'),
+                    loadArb('se')
+                ]);
+
+                data.en = en;
+                data.fi = fi;
+                data.se = se;
+
+                // Collect all translation keys from EN file (the master)
+                allKeys = Object.keys(en).filter(isTranslationKey);
+
+                renderTable();
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('tableWrapper').style.display = '';
+                document.getElementById('toolbar').style.display = 'flex';
+                document.getElementById('status').textContent =
+                    `Loaded ${allKeys.length} translation keys. Click any cell to edit, then download to save.`;
+            } catch (err) {
+                document.getElementById('loading').textContent = 'Error loading translations: ' + err.message;
+                document.getElementById('status').textContent = '';
+            }
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            allKeys.forEach(key => {
+                const tr = document.createElement('tr');
+
+                // Key column
+                const keyTd = document.createElement('td');
+                keyTd.className = 'key-col';
+                keyTd.textContent = key;
+                tr.appendChild(keyTd);
+
+                // EN, FI, SE columns
+                ['en', 'fi', 'se'].forEach(lang => {
+                    const td = document.createElement('td');
+                    td.contentEditable = 'true';
+                    td.textContent = data[lang][key] || '';
+                    td.dataset.lang = lang;
+                    td.dataset.key = key;
+                    td.addEventListener('input', () => {
+                        data[lang][key] = td.textContent;
+                    });
+                    tr.appendChild(td);
+                });
+
+                tbody.appendChild(tr);
+            });
+        }
+
+        function buildArb(lang) {
+            // Rebuild ARB preserving metadata from original
+            const original = data[lang];
+            const output = {};
+
+            // Keep @@locale if present
+            if (original['@@locale'] !== undefined) {
+                output['@@locale'] = original['@@locale'];
+            }
+
+            allKeys.forEach(key => {
+                output[key] = data[lang][key] || '';
+                // Preserve metadata annotation if it exists
+                const metaKey = '@' + key;
+                if (original[metaKey] !== undefined) {
+                    output[metaKey] = original[metaKey];
+                }
+            });
+
+            return JSON.stringify(output, null, 2) + '\n';
+        }
+
+        function downloadArb(lang) {
+            const content = buildArb(lang);
+            const blob = new Blob([content], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `app_${lang}.arb`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showNotice(`app_${lang}.arb downloaded!`);
+        }
+
+        function downloadAll() {
+            ['en', 'fi', 'se'].forEach((lang, i) => {
+                setTimeout(() => downloadArb(lang), i * 300);
+            });
+        }
+
+        function showNotice(msg) {
+            const el = document.getElementById('saveNotice');
+            el.textContent = msg;
+            el.classList.add('show');
+            setTimeout(() => el.classList.remove('show'), 2500);
+        }
+
+        init();
+    </script>
 </body>
 </html>

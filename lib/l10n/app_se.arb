@@ -1,0 +1,99 @@
+{
+  "@@locale": "sv",
+  "appTitle": "Översättare",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "languageEnglish": "Engelska",
+  "@languageEnglish": {
+    "description": "The name of the English language"
+  },
+  "languageFinnish": "Finska",
+  "@languageFinnish": {
+    "description": "The name of the Finnish language"
+  },
+  "languageSwedish": "Svenska",
+  "@languageSwedish": {
+    "description": "The name of the Swedish language"
+  },
+  "translationEditorTitle": "Översättningseditor",
+  "@translationEditorTitle": {
+    "description": "Title for the translation editor screen"
+  },
+  "columnLanguage": "Språk",
+  "@columnLanguage": {
+    "description": "Column header for language"
+  },
+  "columnTranslation": "Översättning",
+  "@columnTranslation": {
+    "description": "Column header for translation"
+  },
+  "enterTranslation": "Ange översättning...",
+  "@enterTranslation": {
+    "description": "Placeholder text for translation input"
+  },
+  "save": "Spara",
+  "@save": {
+    "description": "Label for save button"
+  },
+  "cancel": "Avbryt",
+  "@cancel": {
+    "description": "Label for cancel button"
+  },
+  "settings": "Inställningar",
+  "@settings": {
+    "description": "Label for settings"
+  },
+  "home": "Hem",
+  "@home": {
+    "description": "Label for home"
+  },
+  "add": "Lägg till",
+  "@add": {
+    "description": "Label for add button"
+  },
+  "edit": "Redigera",
+  "@edit": {
+    "description": "Label for edit button"
+  },
+  "delete": "Ta bort",
+  "@delete": {
+    "description": "Label for delete button"
+  },
+  "confirm": "Bekräfta",
+  "@confirm": {
+    "description": "Label for confirm button"
+  },
+  "back": "Tillbaka",
+  "@back": {
+    "description": "Label for back button"
+  },
+  "next": "Nästa",
+  "@next": {
+    "description": "Label for next button"
+  },
+  "done": "Klar",
+  "@done": {
+    "description": "Label for done button"
+  },
+  "loading": "Laddar...",
+  "@loading": {
+    "description": "Loading indicator text"
+  },
+  "error": "Fel",
+  "@error": {
+    "description": "Generic error label"
+  },
+  "retry": "Försök igen",
+  "@retry": {
+    "description": "Label for retry button"
+  },
+  "search": "Sök",
+  "@search": {
+    "description": "Label for search"
+  },
+  "noResults": "Inga resultat hittades",
+  "@noResults": {
+    "description": "Message when no search results are found"
+  }
+}
