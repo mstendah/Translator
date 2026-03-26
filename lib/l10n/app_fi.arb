@@ -1,0 +1,99 @@
+{
+  "@@locale": "fi",
+  "appTitle": "Kääntäjä",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "languageEnglish": "Englanti",
+  "@languageEnglish": {
+    "description": "The name of the English language"
+  },
+  "languageFinnish": "Suomi",
+  "@languageFinnish": {
+    "description": "The name of the Finnish language"
+  },
+  "languageSwedish": "Ruotsi",
+  "@languageSwedish": {
+    "description": "The name of the Swedish language"
+  },
+  "translationEditorTitle": "Käännöseditori",
+  "@translationEditorTitle": {
+    "description": "Title for the translation editor screen"
+  },
+  "columnLanguage": "Kieli",
+  "@columnLanguage": {
+    "description": "Column header for language"
+  },
+  "columnTranslation": "Käännös",
+  "@columnTranslation": {
+    "description": "Column header for translation"
+  },
+  "enterTranslation": "Syötä käännös...",
+  "@enterTranslation": {
+    "description": "Placeholder text for translation input"
+  },
+  "save": "Tallenna",
+  "@save": {
+    "description": "Label for save button"
+  },
+  "cancel": "Peruuta",
+  "@cancel": {
+    "description": "Label for cancel button"
+  },
+  "settings": "Asetukset",
+  "@settings": {
+    "description": "Label for settings"
+  },
+  "home": "Koti",
+  "@home": {
+    "description": "Label for home"
+  },
+  "add": "Lisää",
+  "@add": {
+    "description": "Label for add button"
+  },
+  "edit": "Muokkaa",
+  "@edit": {
+    "description": "Label for edit button"
+  },
+  "delete": "Poista",
+  "@delete": {
+    "description": "Label for delete button"
+  },
+  "confirm": "Vahvista",
+  "@confirm": {
+    "description": "Label for confirm button"
+  },
+  "back": "Takaisin",
+  "@back": {
+    "description": "Label for back button"
+  },
+  "next": "Seuraava",
+  "@next": {
+    "description": "Label for next button"
+  },
+  "done": "Valmis",
+  "@done": {
+    "description": "Label for done button"
+  },
+  "loading": "Ladataan...",
+  "@loading": {
+    "description": "Loading indicator text"
+  },
+  "error": "Virhe",
+  "@error": {
+    "description": "Generic error label"
+  },
+  "retry": "Yritä uudelleen",
+  "@retry": {
+    "description": "Label for retry button"
+  },
+  "search": "Hae",
+  "@search": {
+    "description": "Label for search"
+  },
+  "noResults": "Ei hakutuloksia",
+  "@noResults": {
+    "description": "Message when no search results are found"
+  }
+}
