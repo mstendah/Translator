@@ -1,99 +1,533 @@
 {
   "@@locale": "fi",
-  "appTitle": "Kääntäjä",
-  "@appTitle": {
-    "description": "The title of the application"
+  "appName": "Cozify",
+  "welcomePageTitle": "Tervetuloa",
+  "welcomePageSubtitle": "Cozify HAN -sovellukseen",
+  "actionSignInRegister": "Kirjaudu sisään / Rekisteröidy",
+  "actionChangeLanguage": "Vaihda kieli?",
+  "languageNameEnglish": "Englanti",
+  "languageNameFinnish": "Suomi",
+  "otpScreenTitle": "Kirjaudu sisään / Rekisteröidy",
+  "otpScreenSubTitle": "Kirjoita käyttäjän sähköposti",
+  "otpRequestInstruction": "Kirjoita käyttäjän sähköposti kirjautuaksesi / rekisteröityäksesi. Saat sähköpostiisi kertakäyttöisen kirjautumis-/rekisteröitymislinkin.",
+  "otpConfirmationInstruction": "Tarkista sähköpostistasi kertakäyttöinen kirjautumis-/rekisteröitymislinkki ja kirjoita se kenttään, tai paina sähköpostissa olevaa linkkiä.",
+  "accountEmail": "Tilin sähköposti",
+  "emailFieldPlaceholder": "Kirjoita sähköposti",
+  "otpFieldLabel": "Salasana",
+  "otpFieldPlaceholder": "Kirjoita salasana",
+  "actionNext": "Seuraava",
+  "formErrorMissingValue": "Ei saa olla tyhjä",
+  "formErrorInvalidEmail": "Virheellinen sähköposti",
+  "eulaScreenTitle": "Käyttöehdot",
+  "eulaScreenSubtitle": "Cozify Oy",
+  "actionAcceptTerms": "Hyväksy",
+  "networkScanInstructionsStep1": "Seuraa laitteen ohjekirjan ohjeita asettaaksesi sen paritustilaan",
+  "networkScanInstructionsStep2": "Odota hetki, kun skannaamme älylaitteita kodistasi.",
+  "addNewDeviceTitle": "Lisää laitteita",
+  "addNewDeviceSubtitle": "Valitse lisättävät laitteet",
+  "scanningForDevicesProgressText": "Skannataan laitteita, odota hetki...",
+  "scanningComplete": "Skannaus valmis",
+  "actionScanningRefresh": "Päivitä",
+  "chooseDevicesToBeAdded": "Valitse lisättävät laitteet:",
+  "deviceNotOnTheList": "Laitetta ei näy listassa?",
+  "actionAddHanManually": "Lisää Cozify HAN",
+  "actionDoItLater": "Teen sen myöhemmin",
+  "getHelpUrl": "https://www.cozify.fi/han-quickmanual-fi",
+  "accountDeleteText": "Poista tili",
+  "accountDeleteConfirmationTitle": "Oletko varma, että haluat poistaa tilisi?",
+  "accountDeleteConfirmationInstruction": "Kaikki historiatiedot, asetukset ja laitteet poistetaan pysyvästi, eikä tilisi ole enään käytössä.",
+  "drawerMyGateways": "Omat yhdyskäytävät",
+  "drawerAccountExplore": "Tili & Tutustu",
+  "drawerDashboard": "Dashboard",
+  "drawerMySettings": "Omat asetukset",
+  "drawerSupport": "Tuki",
+  "drawerLogout": "Kirjaudu ulos",
+  "drawerActionAddNewDevice": "Lisää uusi laite",
+  "drawerGatewayDevices": "Laitteet",
+  "drawerGatewayOverview": "Koti",
+  "drawerGatewaySettings": "Asetukset",
+  "drawerGatewaySubtitle": "Hallinnoi yhdyskäytävää",
+  "appVersion": "Sovellusversio {version}",
+  "@appVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
   },
-  "languageEnglish": "Englanti",
-  "@languageEnglish": {
-    "description": "The name of the English language"
+  "claimDeviceSubtitle": "Lisää uusi gateway-laite",
+  "claimDeviceInstruction": "Anna älyhubillesi nimi, joka kuvaa kotiasi. Esim. \"Helsinginkatu 2\" tai \"Cozify ION Home\"",
+  "deviceNamePlaceholder": "Laitteen nimi",
+  "deviceNameInstruction": "Anna laitteellesi lyhyt nimi, esim. \"Kattolamppu\".",
+  "actionClaimDeviceName": "Lisää",
+  "errorViewTitle": "Virhe tapahtui",
+  "deviceClaimedSuccess": "\"{deviceName}\" lisätty onnistuneesti!",
+  "@deviceClaimedSuccess": {
+    "placeholders": {
+      "deviceName": {
+        "type": "String"
+      }
+    }
   },
-  "languageFinnish": "Suomi",
-  "@languageFinnish": {
-    "description": "The name of the Finnish language"
+  "unableToClaim": "Laitetta ei voitu lisätä",
+  "actionRetry": "Yritä uudelleen",
+  "dashboardIntro": "Lisää dasbboardiin suosikkitoiminnot mistä tahansa gateway-laitteesta, tai käytettävistä kolmannen osapuolen palveluista.",
+  "dashboardNoDevices": "Et ole vielä lisännyt laitteita\n<u>Aloita lisäämällä laite</u>",
+  "fieldEmail": "Sähköposti",
+  "fieldNickname": "Lempinimi",
+  "fieldLanguage": "Kieli",
+  "fieldPhone": "Puhelin",
+  "resultCopiedToClipboard": "Kopioitu leikepöydälle",
+  "actionSave": "Tallenna",
+  "actionPaste": "Liitä",
+  "errorSavingSettings": "Virhe tallennettaessa asetuksia",
+  "errorDiscoveringHan": "Uutta HAN-laitetta ei löydetty",
+  "deviceName": "Laitteen nimi",
+  "cozifyHanName": "Cozify HAN",
+  "titleAddingHan": "Lisätään Cozify HAN",
+  "subtitleFollowInstructions": "Seuraa ohjeita",
+  "subtitleEstablishingConnection": "Yhdistetään Cozify HAN -laitteeseen",
+  "subtitleConnectionDetails": "Yhteystiedot",
+  "subtitleConnectionDetailsError": "Asennusvirhe",
+  "subtitleDoneSettingUpHan": "Asennus valmis",
+  "hanInstructionStep1": "Kytke Cozify HAN -laitteen HAN-kaapeli sähkömittarin HAN-porttiin",
+  "hanInstructionStep2": "Varmista, että puhelimesi WiFi-asetus on päällä",
+  "hanInstructionStep3": "Kun HAN-laitteen LED-valo vilkkuu sinertävänä, se on otettavissa käyttösi. Jos sinertävä valo ei vilku, ota WiFi-paritustila käyttöön painamalla laitteen vasemmalla puolella olevaa nappia neulalla (reiän läpi).",
+  "hanInstructionStep4": "Avaa puhelimen asetukset ja yhdistä WiFi-verkkoon joka alkaa \"Cozify-\"",
+  "hanInstructionStep5": "Kun WiFi-verkko on yhdistetty, palaa tähän sovellukseen ja paina \"Seuraava\"",
+  "actionOpenWifiSettings": "Avaa WiFi-asetukset",
+  "hanConnectionDetailsInstruction": "Asennuksen viimeistelemiseksi syötä kotisi WiFi-verkon (2.4GHz) tiedot, jotta Cozify HAN voi yhdistää siihen (käytä 2,4GHz verkkoa)",
+  "labelSelectWifiNetwork": "Valitse WiFi-verkko",
+  "labelWifiSsid": "WiFi-verkon nimi (SSID)",
+  "labelWifiSsidOther": "Muu",
+  "labelWifiPassword": "Salasana",
+  "errorTitleEstablishingConnectionToHan": "Laitetta ei löydetty",
+  "errorEstablishingConnectionToHan": "Tarkista yhteys ja yritä uudelleen",
+  "errorTitleSettingUpHan": "Cozify HAN -laitteen asetukset epäonnistuivat",
+  "connectingHanDevice": "Yhdistetään Cozify HAN -laitteeseen…\nOdota hetki…",
+  "reconnectingHanDevice": "Yhdistetään uudelleen Cozify HAN -laitteeseen…\nOdota hetki…",
+  "actionDone": "Valmis",
+  "hanSetupSuccessTitle": "Cozify HAN lisätty onnistuneesti!",
+  "hanSetupSuccess": "Lukeaksesi dataa HAN-portista, portti täytyy ensin aktivoida sähköverkkoyhtiösi toimesta.\n\nOta heihin yhteyttä aktivoidaksesi portin!\n\nHAN-laite käynnistyy nyt uudelleen soveltaakseen uusia asetuksia. Voit nyt vaihtaa takaisin kotisi WiFi-verkkoon",
+  "settingUpHanNetwork": "Määritetään Cozify HAN -laitetta...",
+  "errorGettingHanSystemInfo": "Virhe Cozify HAN -laitteen järjestelmätietoja haettaessa",
+  "errorHanRespondedWithError": "Cozify HAN -laite vastasi virheellä asennuksen aikana",
+  "errorSetupException": "Virhe Cozify HAN -laitteen asennuksessa. Tarkista verkkoyhteys ja yritä uudelleen",
+  "errorSetupBootException": "Virhe HAN-laitteen asennuksessa. Laite on asennettu, mutta sitä ei löytynyt uudelleenkäynnistyksen jälkeen. Varmista, että Cozify HAN ja puhelimesi ovat yhdistetty samaan verkkoon ja yritä uudelleen",
+  "errorSettingUpHan": "Virhe HAN-laitteen asennuksessa",
+  "errorSettingUpLocalHan": "Virhe paikallisen HAN-laitteen asennuksessa",
+  "hanSettingsSectionEth": "Verkkoyhteys",
+  "hanSettingsSectionWifi": "WiFi",
+  "hanSettingsNetworkName": "WiFi-verkon nimi",
+  "hanSettingsNetworkPassword": "WiFi-salasana",
+  "hanSettingsNetworkIpAddressMode": "IP-osoite tila",
+  "hanSettingsNetworkStaticIp": "Staattinen",
+  "hanSettingsNetworkIp": "IP-osoite",
+  "hanSettingsNetworkDhcp": "DHCP",
+  "hanSettingsNetworkSubnet": "Aliverkko",
+  "hanSettingsNetworkGateway": "Yhdyskäytävä",
+  "hanSettingsNetworkDns1": "DNS 1",
+  "hanSettingsNetworkDns2": "DNS 2",
+  "hanSettingsPowerSaving": "Virransäästö",
+  "hanSettingsSectionElectrical": "Sähköasetukset",
+  "hanSettingsVoltage": "Jännite",
+  "hanSettingsMainFuse": "Pääsulake (A)",
+  "hanSettingsProductionCapacity": "Tuotabto (kWp)",
+  "hanSettingsSectionPrice": "Sähkön hinta",
+  "hanSettingsElectricityFixedPrice": "Kiinteä hinta",
+  "hanSettingsElectricitySpotPrice": "Pörssihinta",
+  "hanSettingsElectricitySpotPriceSubtitle": "Pörssihintaa ei voida käyttää tällä hetkellä",
+  "hanSettingsElectricityPricePerKwtOtherCurrency": "Hinta per kWh",
+  "hanSettingsElectricityPricePerKwt": "Hinta per kWh ({currency})",
+  "@hanSettingsElectricityPricePerKwt": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      }
+    }
   },
-  "languageSwedish": "Ruotsi",
-  "@languageSwedish": {
-    "description": "The name of the Swedish language"
+  "hanSettingsConnectionAddress": "Osoite: {hostname}",
+  "@hanSettingsConnectionAddress": {
+    "placeholders": {
+      "hostname": {
+        "type": "String"
+      }
+    }
   },
-  "translationEditorTitle": "Käännöseditori",
-  "@translationEditorTitle": {
-    "description": "Title for the translation editor screen"
+  "hanSettingsFirmwareVersion": "Ohjelmisto versio: {version}",
+  "@hanSettingsFirmwareVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
   },
-  "columnLanguage": "Kieli",
-  "@columnLanguage": {
-    "description": "Column header for language"
+  "hanSettingsConnectionAddressActive": "Osoite (aktiivinen): {hostname}",
+  "@hanSettingsConnectionAddressActive": {
+    "placeholders": {
+      "hostname": {
+        "type": "String"
+      }
+    }
   },
-  "columnTranslation": "Käännös",
-  "@columnTranslation": {
-    "description": "Column header for translation"
+  "hanSettingsElectricityPriceMultiplier": "Hinnan kerroin",
+  "hanSettingsElectricityCurrency": "Valuutta",
+  "hanSettingsSectionTimezone": "Aikavyöhyke",
+  "hanSettingsWiFiEnabled": "Käytä WiFi-verkkoa",
+  "hanSettingsMultipliers": "Kertoimet",
+  "hanSettingsMultipliersWatt": "Watti",
+  "hanSettingsMultipliersVolt": "Voltti",
+  "hanSettingsMultipliersAmpl": "Ampeeri",
+  "hanSettingsMultipliersKwh": "kWh",
+  "hanSettingsSectionLocal": "Paikalliset asetukset",
+  "hanSettingsLocalHostname": "Laitenimi",
+  "settingsAdvanced": "Edistynyt",
+  "currencyNok": "NOK",
+  "currencySek": "SEK",
+  "currencyDkk": "DKK",
+  "currencyEur": "EUR",
+  "currencyOther": "Muu",
+  "voltage400": "400V (TN)",
+  "voltage230": "230V (IT/TT)",
+  "powerSavingDefaultValue": "Oletus",
+  "powerSavingOff": "Pois päältä",
+  "powerSavingMinimum": "Minimi",
+  "powerSavingMaximum": "Maksimi",
+  "priceRegion": "Hintavyöhyke",
+  "priceRegionNo1S": "NO1 tuella",
+  "priceRegionNo2S": "NO2 tuella",
+  "priceRegionNo3S": "NO3 tuella",
+  "priceRegionNo4S": "NO4 tuella",
+  "priceRegionNo5S": "NO5 tuella",
+  "priceRegionNo1": "NO1",
+  "priceRegionNo2": "NO2",
+  "priceRegionNo3": "NO3",
+  "priceRegionNo4": "NO4",
+  "priceRegionNo5": "NO5",
+  "priceRegionSe1": "SE1",
+  "priceRegionSe2": "SE2",
+  "priceRegionSe3": "SE3",
+  "priceRegionSe4": "SE4",
+  "priceRegionDk1": "DK1",
+  "priceRegionDk2": "DK2",
+  "priceRegionAustria": "Itävalta",
+  "priceRegionBelgium": "Belgia",
+  "priceRegionCzechRepublic": "Tšekki",
+  "priceRegionEstonia": "Viro",
+  "priceRegionFinland": "Suomi",
+  "priceRegionFrance": "Ranska",
+  "priceRegionGermany": "Saksa",
+  "priceRegionGreatBritain": "Iso-Britannia",
+  "priceRegionLatvia": "Latvia",
+  "priceRegionLithuania": "Liettua",
+  "priceRegionNetherland": "Alankomaat",
+  "priceRegionPoland": "Puola",
+  "priceRegionSwitzerland": "Sveitsi",
+  "formErrorMustBeAnInteger": "Täytyy olla kokonaisluku",
+  "formErrorMustBeADouble": "Täytyy olla numero",
+  "formErrorMustBePositive": "Täytyy olla positiivinen luku",
+  "formErrorInvalidIpAddress": "Virheellinen IP-osoite",
+  "hanSettingsSavedSuccessfully": "Asetukset tallennettu onnistuneesti",
+  "hanSettingsSavedNowReboot": "Asetukset tallennettu. Laite käynnistyy nyt uudelleen",
+  "chartMainFuseUsage": "Pääsulakkeen käyttö",
+  "chartConsumptionAndProduction": "Kulutus ja tuotanto",
+  "chartConsumptionHistory": "Kulutushistoria",
+  "chartConsumptionNow": "Nyt: {value}",
+  "@chartConsumptionNow": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   },
-  "enterTranslation": "Syötä käännös...",
-  "@enterTranslation": {
-    "description": "Placeholder text for translation input"
+  "mainFuseUsageSubtitle": "{current} ({consumption}, {cost}/h)",
+  "@mainFuseUsageSubtitle": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "consumption": {
+        "type": "String"
+      },
+      "cost": {
+        "type": "String"
+      }
+    }
   },
-  "save": "Tallenna",
-  "@save": {
-    "description": "Label for save button"
+  "mainFuseUsageSubtitle2": "Per vaiheen enimmäiskapasiteetti {value} A",
+  "@mainFuseUsageSubtitle2": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   },
-  "cancel": "Peruuta",
-  "@cancel": {
-    "description": "Label for cancel button"
+  "totalPowerConsumption": "Kulutus {value}",
+  "@totalPowerConsumption": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   },
-  "settings": "Asetukset",
-  "@settings": {
-    "description": "Label for settings"
+  "totalPowerProduction": "Tuotanto {value}",
+  "@totalPowerProduction": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   },
-  "home": "Koti",
-  "@home": {
-    "description": "Label for home"
+  "chartYAxisMainFuseUsage": "Pääsulakkeen käyttö",
+  "chartYAxisConsumptionAndProduction": "Kulutus ja tuotanto, {unit}",
+  "@chartYAxisConsumptionAndProduction": {
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
   },
-  "add": "Lisää",
-  "@add": {
-    "description": "Label for add button"
+  "chartPhase1Name": "L1",
+  "chartPhase2Name": "L2",
+  "chartPhase3Name": "L3",
+  "chartLegendConsumption": "Kulutus (+)",
+  "chartLegendProduction": "Tuotanto (-)",
+  "formatKilowatts": "{value} kW",
+  "@formatKilowatts": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   },
-  "edit": "Muokkaa",
-  "@edit": {
-    "description": "Label for edit button"
+  "formatWatts": "{value} W",
+  "@formatWatts": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   },
-  "delete": "Poista",
-  "@delete": {
-    "description": "Label for delete button"
+  "formatKilowattHours": "{value} kWh",
+  "@formatKilowattHours": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   },
-  "confirm": "Vahvista",
-  "@confirm": {
-    "description": "Label for confirm button"
+  "formatCurrent": "{value} A",
+  "@formatCurrent": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   },
-  "back": "Takaisin",
-  "@back": {
-    "description": "Label for back button"
+  "formatCurrency": "{value}{symbol}",
+  "@formatCurrency": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "symbol": {
+        "type": "String"
+      }
+    }
   },
-  "next": "Seuraava",
-  "@next": {
-    "description": "Label for next button"
+  "chartTypeDay": "24 hours",
+  "chartTypeMonth": "1 month",
+  "chartTooltipConsumption": "Kulutus: {value}",
+  "@chartTooltipConsumption": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   },
-  "done": "Valmis",
-  "@done": {
-    "description": "Label for done button"
+  "chartTooltipProduction": "Tuotanto: {value}",
+  "@chartTooltipProduction": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   },
+  "chartTooltipCost": "Kustannus {value}",
+  "@chartTooltipCost": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "chartTooltipEnergy": "Energia: {value}",
+  "@chartTooltipEnergy": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "cozifyHanDisplayedNameSimple": "Cozify HAN",
+  "cozifyHanDisplayedNameOneOfMany": "Cozify HAN ({id})",
+  "@cozifyHanDisplayedNameOneOfMany": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "hanChartChangeSnackbarTitle": "Viimeisin muutos",
+  "hanChartChangeText": "{wattage} ({hourPrice}/h)",
+  "@hanChartChangeText": {
+    "placeholders": {
+      "wattage": {
+        "type": "String"
+      },
+      "hourPrice": {
+        "type": "String"
+      }
+    }
+  },
+  "actionPauseUpdates": "Keskeytä päivitykset",
+  "notAvailable": "-",
+  "remainingTimeSeconds": "{seconds} sec",
+  "@remainingTimeSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "actionAddMoreDevices": "Lisää uusia laitteita",
+  "changesSavedSnackbar": "Muutokset tallennettu",
+  "hanDeviceDisconnected": "Yhteys laitteeseen epäonnistui",
+  "deviceDisconnected": "Yhteys laitteeseen epäonnistui",
+  "hanOverviewErrorTitle": "Tietoja ei voida lukea",
+  "hanOverviewErrorMessage": "1. Tarkista, että HAN-laite on kytketty HAN-aktivoituun sähkömittariin\n2. Varmista, että puhelimesi on yhdistetty kotiverkon WiFi-verkkoon.\n<small>(Huom: HAN-laite on luettavissa vain paikallisesti).</small>\n3. Yhdistä HAN-laite kotiverkkoon Ethernet-kaapelilla",
+  "hanOverviewErrorSnackbar": "Tietoja ei voida lukea. Varmista, että laite on yhdistetty kotiverkkoosi",
+  "deviceAddedPopUp": "Laite lisätty",
+  "energyMeter": "Sähkömittari",
+  "energyMeterHourPrice": "{price}/h",
+  "@energyMeterHourPrice": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "energyMeterCurrentPrice": "{price}{currency}/kWh",
+  "@energyMeterCurrentPrice": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      },
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "energyMeterImportOnlyReading": "Mittarin lukema",
+  "energyMeterImportReading": "Kulutus lukema",
+  "energyMeterExportReading": "Syöttö lukema",
+  "waitingForData": "Odotetaan tietoja...",
+  "actionPairHanWithEthernet": "Parita Ethernet-kaapelilla",
+  "actionForgetThisDevice": "Unohda tämä laite",
+  "actionCancel": "Peruuta",
+  "dialogContentForgetDevice": "Oletko varma, että haluat unohtaa tämän laitteen? Laitteen unohtamisen jälkeen sitä ei enää näytetä laitelistassasi.\n\nJos haluat lisätä laitteen uudelleen, sinun on painettava laitteen vasemmalla puolella olevan reiän painiketta, kunnes LED alkaa vilkkua sinertävänä, jolloin laitteen paritustila on jälleen käytettävissä.",
+  "chartAxisNow": "NYT",
+  "chartAxisFormatMinusMinutes": "-{minutes}min",
+  "@chartAxisFormatMinusMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "unitKiloWatt": "kW",
+  "unitKiloWattHours": "kWh",
+  "unitWatt": "W",
+  "formatHourly": "{value}/h",
+  "@formatHourly": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "formatDaily": "{value}/d",
+  "@formatDaily": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "formatPricePerKwh": "{price}/kWh",
+  "@formatPricePerKwh": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "hanSettingsFirmwareOutdated": "Laitteen ohjelmisto on vanhentunut (nykyinen {current}, odotettu {expected})",
+  "@hanSettingsFirmwareOutdated": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "expected": {
+        "type": "String"
+      }
+    }
+  },
+  "hanSettingsActionUpdateFirmware": "Päivitä ohjelmisto",
+  "hanSettingsFirmwareUpdating": "Lähetetään ohjelmistoa...",
+  "hanSettingsFirmwareUpdateSuccess": "Ohjelmisto ladattu. Laite käynnistyy uudelleen. Yhdistä hetken kuluttua uudelleen.",
+  "hanSettingsFirmwareUpdateFailed": "Ohjelmiston lataus epäonnistui",
+  "supportRequestSubject": "Cozify HAN Tukipyyntö",
+  "supportRequestTitle": "Cozify HAN Tukipyyntö",
+  "generalInfo": "Yleiset tiedot",
+  "gatewayId": "Gateway ID",
+  "firmwareVersion": "Firmware-versio",
+  "ethSettings": "Ethernet-asetukset",
+  "ethIpMode": "IP-osoitetila",
+  "ethStaticIp": "Staattinen IP",
+  "ethSubnet": "Aliverkon peite",
+  "ethGateway": "Yhdyskäytävä",
+  "ethDns1": "DNS 1",
+  "ethDns2": "DNS 2",
+  "wifiSettings": "WiFi-asetukset",
+  "wifiEnabled": "WiFi käytössä",
+  "yes": "Kyllä",
+  "no": "Ei",
+  "unknown": "Tuntematon",
+  "describeIssueBelow": "Kuvaile ongelmasi tähän:",
   "loading": "Ladataan...",
-  "@loading": {
-    "description": "Loading indicator text"
-  },
-  "error": "Virhe",
-  "@error": {
-    "description": "Generic error label"
-  },
-  "retry": "Yritä uudelleen",
-  "@retry": {
-    "description": "Label for retry button"
-  },
-  "search": "Hae",
-  "@search": {
-    "description": "Label for search"
-  },
-  "noResults": "Ei hakutuloksia",
-  "@noResults": {
-    "description": "Message when no search results are found"
-  }
+  "contactSupport": "Ota yhteyttä tukeen",
+  "apiInterfacesTitle": "API-rajapinnat",
+  "restApiLabel": "REST API:",
+  "nonCommercialNote": " * Maksuton ei kaupalliseen käyttöön",
+  "commercialUseNote": "kaupallista käyttöä varten ota yhteyttä tukeen.",
+  "commercialRestApi": " * Rest API",
+  "commercialMqtt": " * MQTT",
+  "commercialModbus": " * Modbus (TCP)",
+  "hanSettingsSupport": "Tekninen tuki",
+  "connected": "Yhdistetty",
+  "connectionFailed": "Yhteys epäonnistui",
+  "gatewayIpUpdated": "Osoite päivitetty",
+  "gatewayIp": "HAN-osoite",
+  "checking": "Tarkistetaan...",
+  "testConnection": "Testaa yhteys",
+  "updateSavedIp": "Yhdistä osoitteeseen",
+  "actionAutodiscover": "Aloita automaattinen etsintä",
+  "deviceSettings": "Laiteasetukset",
+  "showSupportData": "Näytä tekniset tiedot",
+  "copy": "Kopioi",
+  "close": "Sulje",
+  "automatic": "Automaattinen",
+  "manual": "Manuaalinen",
+  "ipModeDescription": "Valitse, käytetäänkö automaattista vai manuaalista IP-osoitetta"
 }

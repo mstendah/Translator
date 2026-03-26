@@ -1,1 +1,533 @@
-{"hello":"Hello","goodbye":"Goodbye"}
+{
+  "@@locale": "en",
+  "appName": "Cozify",
+  "welcomePageTitle": "Welcome",
+  "welcomePageSubtitle": "to your Cozify HAN app",
+  "actionSignInRegister": "Sign in / Register",
+  "actionChangeLanguage": "Change language?",
+  "languageNameEnglish": "English",
+  "languageNameFinnish": "Finnish",
+  "otpScreenTitle": "Sign in / Register",
+  "otpScreenSubTitle": "Type in user email",
+  "otpRequestInstruction": "Type in your user email sign in / register. You’ll receive a one-time login/register passcode to your email.",
+  "otpConfirmationInstruction": "Check your email for a one-time log-in / register passcode and type it in / press the link in email.",
+  "accountEmail": "Account email",
+  "emailFieldPlaceholder": "Type in email",
+  "otpFieldLabel": "Password",
+  "otpFieldPlaceholder": "Type in password",
+  "actionNext": "Next",
+  "formErrorMissingValue": "Must not be empty",
+  "formErrorInvalidEmail": "Invalid email",
+  "eulaScreenTitle": "Terms of use",
+  "eulaScreenSubtitle": "Cozify Ltd.",
+  "actionAcceptTerms": "Accept",
+  "networkScanInstructionsStep1": "Follow your device's manual's instructions to set it to pairing mode",
+  "networkScanInstructionsStep2": "Please wait while we scan smart devices in your home.",
+  "addNewDeviceTitle": "Add devices",
+  "addNewDeviceSubtitle": "Choose devices to be added",
+  "scanningForDevicesProgressText": "Scanning devices, please wait...",
+  "scanningComplete": "Scanning complete",
+  "actionScanningRefresh": "Refresh",
+  "chooseDevicesToBeAdded": "Choose devices to be added:",
+  "deviceNotOnTheList": "Device not seen on list?",
+  "actionAddHanManually": "Add Cozify HAN",
+  "actionDoItLater": "I'll do it later",
+  "getHelpUrl": "https://www.cozify.fi/han-quickmanual-en",
+  "accountDeleteText": "Remove account",
+  "accountDeleteConfirmationTitle": "Are you sure, you want to remove your account?",
+  "accountDeleteConfirmationInstruction": "All of your history, settings and devices will be removed and you will lose access to your account immediately.",
+  "drawerMyGateways": "My gateways",
+  "drawerAccountExplore": "Account & Explore",
+  "drawerDashboard": "Dashboard",
+  "drawerMySettings": "My settings",
+  "drawerSupport": "Support",
+  "drawerLogout": "Log out",
+  "drawerActionAddNewDevice": "Add new device",
+  "drawerGatewayDevices": "Devices",
+  "drawerGatewayOverview": "Overview",
+  "drawerGatewaySettings": "Settings",
+  "drawerGatewaySubtitle": "Manage gateway",
+  "appVersion": "App version {version}",
+  "@appVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "claimDeviceSubtitle": "Add new gateway device",
+  "claimDeviceInstruction": "Give you smart hub a name that describes your home. E.g. “Helsinginkatu 2” or “Cozify ION Home”",
+  "deviceNamePlaceholder": "Hub name",
+  "deviceNameInstruction": "Give a short name for your device, e.g. “Ceiling lamp”.",
+  "actionClaimDeviceName": "Add",
+  "errorViewTitle": "An error occurred",
+  "deviceClaimedSuccess": "\"{deviceName}\" claimed successfully!",
+  "@deviceClaimedSuccess": {
+    "placeholders": {
+      "deviceName": {
+        "type": "String"
+      }
+    }
+  },
+  "unableToClaim": "Unable to claim a device",
+  "actionRetry": "Retry",
+  "dashboardIntro": "Add to dashboard your favorite features from any gateway or available 3rd party integrations.",
+  "dashboardNoDevices": "You don't have any devices yet added\n<u>Start by adding a device</u>",
+  "fieldEmail": "Email",
+  "fieldNickname": "Nickname",
+  "fieldLanguage": "Language",
+  "fieldPhone": "Phone",
+  "resultCopiedToClipboard": "Copied to clipboard",
+  "actionSave": "Save",
+  "actionPaste": "Paste",
+  "errorSavingSettings": "An error occurred while saving settings",
+  "deviceName": "Device name",
+  "cozifyHanName": "Cozify HAN",
+  "titleAddingHan": "Adding Cozify HAN",
+  "subtitleFollowInstructions": "Follow instructions",
+  "subtitleEstablishingConnection": "Connecting to a Cozify HAN device",
+  "subtitleConnectionDetails": "Connection details",
+  "subtitleConnectionDetailsError": "Setup error",
+  "subtitleDoneSettingUpHan": "Done",
+  "hanInstructionStep1": "Plug in your Cozify HAN device’s HAN cable to your electricity meter’s HAN-port to enable pairing",
+  "hanInstructionStep2": "Make sure your phone has WiFi enabled",
+  "hanInstructionStep3": "The HAN device is ready for pairing, when the cyan led starts blinking. If cyan led doesn't start blinking, press button on left side of Cozify HAN with a pin (through the button hole).",
+  "hanInstructionStep4": "Open phone settings and connect to a WiFi network that starts with \"Cozify-\"",
+  "hanInstructionStep5": "When WiFi network is connected, return to this app and press \"Next\"",
+  "actionOpenWifiSettings": "Open WiFi settings",
+  "hanConnectionDetailsInstruction": "To complete the installation, provide your home WiFi network's (2.4GHz) details so Cozify HAN can connect to your home network (use a 2.4GHz network)",
+  "labelSelectWifiNetwork": "Select WiFi network",
+  "labelWifiSsid": "WiFi network name (SSID)",
+  "labelWifiSsidOther": "Other",
+  "labelWifiPassword": "Password",
+  "errorTitleEstablishingConnectionToHan": "A device couldn't be found",
+  "errorEstablishingConnectionToHan": "Please check the connection and try again",
+  "errorTitleSettingUpHan": "Could not set up Cozify HAN",
+  "connectingHanDevice": "Connecting to Cozify HAN…\nPlease wait…",
+  "reconnectingHanDevice": "Reconnecting to Cozify HAN…\nPlease wait…",
+  "actionDone": "Done",
+  "hanSetupSuccessTitle": "Cozify HAN has been added successfully!",
+  "hanSetupSuccess": "In order to get data from HAN port - the port needs to be first activated by your electricity grid service provider.\n\nContact them to get it activated!\n\nHAN device will now reboot in order to apply new settings. You can now switch back to your home WiFi network",
+  "settingUpHanNetwork": "Setting up Cozify HAN device...",
+  "errorGettingHanSystemInfo": "An error occurred while getting Cozify HAN device's system info",
+  "errorHanRespondedWithError": "Cozify HAN device responded with error while setting up",
+  "errorSetupException": "Error setting up Cozify HAN device. Please check the network connection and try again",
+  "errorSetupBootException": "Error setting up HAN device. The device has been set up but could not be found after reboot. Please make sure that Cozify HAN and your phone are connected to the same network and try again",
+  "errorSettingUpHan": "An error occurred while setting up HAN device",
+  "errorDiscoveringHan": "HAN device could not be found",
+  "errorSettingUpLocalHan": "An error occurred while setting up local HAN device",
+  "hanSettingsSectionEth": "Ethernet",
+  "hanSettingsSectionWifi": "WiFi",
+  "hanSettingsNetworkName": "WiFi network",
+  "hanSettingsNetworkPassword": "WiFi password",
+  "hanSettingsNetworkIpAddressMode": "IP address mode",
+  "hanSettingsNetworkStaticIp": "Static",
+  "hanSettingsNetworkIp": "IP address",
+  "hanSettingsNetworkDhcp": "DHCP",
+  "hanSettingsNetworkSubnet": "Subnet",
+  "hanSettingsNetworkGateway": "Gateway",
+  "hanSettingsNetworkDns1": "DNS 1",
+  "hanSettingsNetworkDns2": "DNS 2",
+  "hanSettingsPowerSaving": "Power saving",
+  "hanSettingsSectionElectrical": "Electrical settings",
+  "hanSettingsVoltage": "Voltage",
+  "hanSettingsMainFuse": "Main fuse (A)",
+  "hanSettingsProductionCapacity": "Production (kWp)",
+  "hanSettingsSectionPrice": "Electricity price",
+  "hanSettingsElectricityFixedPrice": "Fixed price",
+  "hanSettingsElectricitySpotPrice": "Spot price",
+  "hanSettingsElectricitySpotPriceSubtitle": "Spot price cannot be used at the moment",
+  "hanSettingsElectricityPricePerKwtOtherCurrency": "Price per kWh",
+  "hanSettingsElectricityPricePerKwt": "Price per kWh ({currency})",
+  "@hanSettingsElectricityPricePerKwt": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "hanSettingsConnectionAddress": "Address: {hostname}",
+  "@hanSettingsConnectionAddress": {
+    "placeholders": {
+      "hostname": {
+        "type": "String"
+      }
+    }
+  },
+  "hanSettingsFirmwareVersion": "Firmware version: {version}",
+  "@hanSettingsFirmwareVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "hanSettingsConnectionAddressActive": "Address (active): {hostname}",
+  "@hanSettingsConnectionAddressActive": {
+    "placeholders": {
+      "hostname": {
+        "type": "String"
+      }
+    }
+  },
+  "hanSettingsElectricityPriceMultiplier": "Price multiplier",
+  "hanSettingsElectricityCurrency": "Currency",
+  "hanSettingsSectionTimezone": "Timezone",
+  "hanSettingsWiFiEnabled": "Use WiFi network",
+  "hanSettingsMultipliers": "Multipliers",
+  "hanSettingsMultipliersWatt": "Watt",
+  "hanSettingsMultipliersVolt": "Volt",
+  "hanSettingsMultipliersAmpl": "Amp",
+  "hanSettingsMultipliersKwh": "kWh",
+  "hanSettingsSectionLocal": "Local settings",
+  "hanSettingsLocalHostname": "Hostname",
+  "settingsAdvanced": "Advanced",
+  "currencyNok": "NOK",
+  "currencySek": "SEK",
+  "currencyDkk": "DKK",
+  "currencyEur": "EUR",
+  "currencyOther": "Other",
+  "voltage400": "400V (TN)",
+  "voltage230": "230V (IT/TT)",
+  "powerSavingDefaultValue": "Default",
+  "powerSavingOff": "Off",
+  "powerSavingMinimum": "Minimum",
+  "powerSavingMaximum": "Maximum",
+  "priceRegion": "Price region",
+  "priceRegionNo1S": "NO1 with support",
+  "priceRegionNo2S": "NO2 with support",
+  "priceRegionNo3S": "NO3 with support",
+  "priceRegionNo4S": "NO4 with support",
+  "priceRegionNo5S": "NO5 with support ",
+  "priceRegionNo1": "NO1",
+  "priceRegionNo2": "NO2",
+  "priceRegionNo3": "NO3",
+  "priceRegionNo4": "NO4",
+  "priceRegionNo5": "NO5",
+  "priceRegionSe1": "SE1",
+  "priceRegionSe2": "SE2",
+  "priceRegionSe3": "SE3",
+  "priceRegionSe4": "SE4",
+  "priceRegionDk1": "DK1",
+  "priceRegionDk2": "DK2",
+  "priceRegionAustria": "Austria",
+  "priceRegionBelgium": "Belgium",
+  "priceRegionCzechRepublic": "Czech Republic",
+  "priceRegionEstonia": "Estonia",
+  "priceRegionFinland": "Finland",
+  "priceRegionFrance": "France",
+  "priceRegionGermany": "Germany",
+  "priceRegionGreatBritain": "Great Britain",
+  "priceRegionLatvia": "Latvia",
+  "priceRegionLithuania": "Lithuania",
+  "priceRegionNetherland": "Netherland",
+  "priceRegionPoland": "Poland",
+  "priceRegionSwitzerland": "Switzerland",
+  "formErrorMustBeAnInteger": "Must be a whole number",
+  "formErrorMustBeADouble": "Must be a number",
+  "formErrorMustBePositive": "Must be a positive number",
+  "formErrorInvalidIpAddress": "Invalid IP address",
+  "hanSettingsSavedSuccessfully": "Settings have been saved successfully",
+  "hanSettingsSavedNowReboot": "Settings have been saved. Device will now reboot",
+  "chartMainFuseUsage": "Main fuse usage",
+  "chartConsumptionAndProduction": "Consumption and production",
+  "chartConsumptionHistory": "Consumption history",
+  "chartConsumptionNow": "Now: {value}",
+  "@chartConsumptionNow": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mainFuseUsageSubtitle": "{current} ({consumption}, {cost}/h)",
+  "@mainFuseUsageSubtitle": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "consumption": {
+        "type": "String"
+      },
+      "cost": {
+        "type": "String"
+      }
+    }
+  },
+  "mainFuseUsageSubtitle2": "Per phase maximum capacity {value} A",
+  "@mainFuseUsageSubtitle2": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "totalPowerConsumption": "Consumption {value}",
+  "@totalPowerConsumption": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "totalPowerProduction": "Production {value}",
+  "@totalPowerProduction": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "chartYAxisMainFuseUsage": "Main fuse usage",
+  "chartYAxisConsumptionAndProduction": "Consumption and production, {unit}",
+  "@chartYAxisConsumptionAndProduction": {
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "chartPhase1Name": "L1",
+  "chartPhase2Name": "L2",
+  "chartPhase3Name": "L3",
+  "chartLegendConsumption": "Consumption (+)",
+  "chartLegendProduction": "Production (-)",
+  "formatKilowatts": "{value} kW",
+  "@formatKilowatts": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "formatWatts": "{value} W",
+  "@formatWatts": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "formatKilowattHours": "{value} kWh",
+  "@formatKilowattHours": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "formatCurrent": "{value} A",
+  "@formatCurrent": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "formatCurrency": "{value}{symbol}",
+  "@formatCurrency": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "symbol": {
+        "type": "String"
+      }
+    }
+  },
+  "chartTypeDay": "24 hours",
+  "chartTypeMonth": "1 month",
+  "chartTooltipConsumption": "Consumption: {value}",
+  "@chartTooltipConsumption": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "chartTooltipProduction": "Production: {value}",
+  "@chartTooltipProduction": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "chartTooltipCost": "Cost {value}",
+  "@chartTooltipCost": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "chartTooltipEnergy": "Energy: {value}",
+  "@chartTooltipEnergy": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "cozifyHanDisplayedNameSimple": "Cozify HAN",
+  "cozifyHanDisplayedNameOneOfMany": "Cozify HAN ({id})",
+  "@cozifyHanDisplayedNameOneOfMany": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "hanChartChangeSnackbarTitle": "Latest change",
+  "hanChartChangeText": "{wattage} ({hourPrice}/h)",
+  "@hanChartChangeText": {
+    "placeholders": {
+      "wattage": {
+        "type": "String"
+      },
+      "hourPrice": {
+        "type": "String"
+      }
+    }
+  },
+  "actionPauseUpdates": "Pause updates",
+  "notAvailable": "-",
+  "remainingTimeSeconds": "{seconds} sec",
+  "@remainingTimeSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "actionAddMoreDevices": "Add more devices",
+  "changesSavedSnackbar": "Changes have been saved",
+  "hanDeviceDisconnected": "Connection failed",
+  "deviceDisconnected": "Connection failed",
+  "hanOverviewErrorTitle": "Not able to read data",
+  "hanOverviewErrorMessage": "1. Check that your HAN device is connected to your activated electric meter\n2. Make sure your phone is connected to your home network WiFi.\n<small>(Note: HAN device is only readable locally).</small>\n3. Try connecting your HAN device to your home network with Ethernet cable",
+  "hanOverviewErrorSnackbar": "Not able to read data. Make sure device is connected to your home network",
+  "deviceAddedPopUp": "Device added",
+  "energyMeter": "Energy meter",
+  "energyMeterHourPrice": "{price}/h",
+  "@energyMeterHourPrice": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "energyMeterCurrentPrice": "{price}{currency}/kWh",
+  "@energyMeterCurrentPrice": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      },
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "energyMeterImportOnlyReading": "Total",
+  "energyMeterImportReading": "Power import",
+  "energyMeterExportReading": "Power export",
+  "waitingForData": "Waiting for data...",
+  "actionPairHanWithEthernet": "Pair with Ethernet-cable instead",
+  "actionForgetThisDevice": "Forget this device",
+  "actionCancel": "Cancel",
+  "dialogContentForgetDevice": "Are you sure you want to forget this device? After forgetting this device it won't be shown in your devices list anymore.\n\nIf you want to add the device again, you'll need to press the button on left side briefly, to enable its pairing mode again.",
+  "chartAxisNow": "NOW",
+  "chartAxisFormatMinusMinutes": "-{minutes}min",
+  "@chartAxisFormatMinusMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "unitKiloWatt": "kW",
+  "unitKiloWattHours": "kWh",
+  "unitWatt": "W",
+  "formatHourly": "{value}/h",
+  "@formatHourly": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "formatDaily": "{value}/d",
+  "@formatDaily": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "formatPricePerKwh": "{price}/kWh",
+  "@formatPricePerKwh": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "hanSettingsFirmwareOutdated": "Device firmware is outdated (current {current}, expected {expected})",
+  "@hanSettingsFirmwareOutdated": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "expected": {
+        "type": "String"
+      }
+    }
+  },
+  "hanSettingsActionUpdateFirmware": "Update firmware",
+  "hanSettingsFirmwareUpdating": "Uploading firmware...",
+  "hanSettingsFirmwareUpdateSuccess": "Firmware uploaded. Device will reboot. Reconnect in a moment.",
+  "hanSettingsFirmwareUpdateFailed": "Firmware upload failed",
+  "supportRequestSubject": "Cozify HAN Support Request",
+  "supportRequestTitle": "Cozify HAN Support Request",
+  "generalInfo": "General Information",
+  "gatewayId": "Gateway ID",
+  "firmwareVersion": "Firmware Version",
+  "ethSettings": "Ethernet Settings",
+  "ethIpMode": "IP Mode",
+  "ethStaticIp": "Static IP",
+  "ethSubnet": "Subnet Mask",
+  "ethGateway": "Gateway",
+  "ethDns1": "DNS 1",
+  "ethDns2": "DNS 2",
+  "wifiSettings": "WiFi Settings",
+  "wifiEnabled": "WiFi Enabled",
+  "yes": "Yes",
+  "no": "No",
+  "unknown": "Unknown",
+  "describeIssueBelow": "Describe your issue here:",
+  "loading": "Loading...",
+  "contactSupport": "Contact Support",
+  "apiInterfacesTitle": "API Interfaces",
+  "restApiLabel": "Rest API:",
+  "nonCommercialNote": " * Free for non-commercial use",
+  "commercialUseNote": "Contact support regarding commercial use",
+  "commercialRestApi": " * Rest API",
+  "commercialMqtt": " * MQTT",
+  "commercialModbus": " * Modbus (TCP)",
+  "hanSettingsSupport": "Technical support",
+  "connected": "Connected",
+  "connectionFailed": "Connection failed",
+  "gatewayIpUpdated": "Address updated",
+  "gatewayIp": "HAN address",
+  "checking": "Checking...",
+  "testConnection": "Test connection",
+  "updateSavedIp": "Connect to address",
+  "actionAutodiscover": "Start automatic search",
+  "deviceSettings": "Device settings",
+  "showSupportData": "Show technical info",
+  "copy": "Copy",
+  "close": "Close",
+  "automatic": "Automatic",
+  "manual": "Manual",
+  "ipModeDescription": "Choose whether to use automatic or manual IP address"
+}
