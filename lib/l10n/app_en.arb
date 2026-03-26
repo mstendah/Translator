@@ -1,0 +1,39 @@
+{
+  "@@locale": "en",
+  "appTitle": "Translation Editor",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "languageLabel": "Language",
+  "@languageLabel": {
+    "description": "Column header for the language column"
+  },
+  "translationLabel": "Translation",
+  "@translationLabel": {
+    "description": "Column header for the translation column"
+  },
+  "englishLanguage": "English (EN)",
+  "@englishLanguage": {
+    "description": "Label for the English language row"
+  },
+  "finnishLanguage": "Finnish (FI)",
+  "@finnishLanguage": {
+    "description": "Label for the Finnish language row"
+  },
+  "swedishLanguage": "Swedish (SV)",
+  "@swedishLanguage": {
+    "description": "Label for the Swedish language row"
+  },
+  "enterEnglishTranslation": "Enter English translation...",
+  "@enterEnglishTranslation": {
+    "description": "Placeholder text for the English translation field"
+  },
+  "enterFinnishTranslation": "Enter Finnish translation...",
+  "@enterFinnishTranslation": {
+    "description": "Placeholder text for the Finnish translation field"
+  },
+  "preTranslatedFromEnglish": "Pre-translated from English",
+  "@preTranslatedFromEnglish": {
+    "description": "Placeholder text for pre-translated content"
+  }
+}

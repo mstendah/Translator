@@ -1,0 +1,39 @@
+{
+  "@@locale": "fi",
+  "appTitle": "Käännöseditori",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "languageLabel": "Kieli",
+  "@languageLabel": {
+    "description": "Column header for the language column"
+  },
+  "translationLabel": "Käännös",
+  "@translationLabel": {
+    "description": "Column header for the translation column"
+  },
+  "englishLanguage": "Englanti (EN)",
+  "@englishLanguage": {
+    "description": "Label for the English language row"
+  },
+  "finnishLanguage": "Suomi (FI)",
+  "@finnishLanguage": {
+    "description": "Label for the Finnish language row"
+  },
+  "swedishLanguage": "Ruotsi (SV)",
+  "@swedishLanguage": {
+    "description": "Label for the Swedish language row"
+  },
+  "enterEnglishTranslation": "Syötä englanninkielinen käännös...",
+  "@enterEnglishTranslation": {
+    "description": "Placeholder text for the English translation field"
+  },
+  "enterFinnishTranslation": "Syötä suomenkielinen käännös...",
+  "@enterFinnishTranslation": {
+    "description": "Placeholder text for the Finnish translation field"
+  },
+  "preTranslatedFromEnglish": "Esikäännetty englannista",
+  "@preTranslatedFromEnglish": {
+    "description": "Placeholder text for pre-translated content"
+  }
+}
